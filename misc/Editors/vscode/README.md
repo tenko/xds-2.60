@@ -4,8 +4,9 @@ This is the vscode extension for the Oberon-2/Modula-2 language for the XDS dial
 
 This extension rely on executing the `xidetool` in order to parse files
 and read syntax information in the form of JSON back.
+`xidetool` is found in utils/xidetool.
 
-There are no pre-packaged versions of this extension, as changes to frequently.
+There are no pre-packaged versions of this extension, as changes are to frequently.
 
 ## Build instructions
 
@@ -23,7 +24,7 @@ npx vsce package
 
 Then install vscode by switching to the Extensions section on the left, then the `...` at the top middle and choose "Install from VSIX..." and choose the package you just created.
 
-In the settings for jakt under Preferences: Open Settings (UI) from the command palate (cmd/ctrl + shift + p), set the XIdeTool: Executable Path to your configured `/path/to/bin/xidetool`. This must be an absolute path.
+In the settings for the oberon2 extension under Preferences: Open Settings (UI) from the command palate (cmd/ctrl + shift + p), set the XIdeTool: Executable Path to your configured `/path/to/bin/xidetool`. This must be an absolute path.
 
 Alternatively, modify the `.vscode/settings.json` file to have an entry similar to the following:
 
