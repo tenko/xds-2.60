@@ -74,6 +74,22 @@
 			<key>name</key>
 			<string>constant.numeric.oberon2</string>
 		</dict>
+        <dict>
+            <key>begin</key>
+			<string>\<\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.oberon2</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\*\></string>
+			<key>name</key>
+			<string>comment.block.oberon2</string>
+        </dict>
 		<dict>
 			<key>include</key>
 			<string>#comment</string>
