@@ -1,5 +1,25 @@
+Note on fork
+============
+
+This fork has the following notable changes:
+
+* *utils\xidetool* for integration with IDE/Editors.
+  Based on Obide (Oberon IDE) plugin for Notepad++
+  by [Alexander Ilin](https://github.com/alex-ilin)
+
+* *misc\Editors\vscode* for integration with VSCode
+  using the xidetool for symbol completion and
+  document symbols. Syntax highlighting is adapted
+  to the syntax extension supported by XDS.
+
+* *comp\enduser\linux\bin\runxc* : Script to run compiler
+  from bash shebang.
+
+* Building updated to latest version of Visual Studio.
+  NASM from MinGW.
+
 XDS Modula-2/Oberon-2 Development
-====================================================
+=================================
 
 The XDS development system facilitate software development in the Modula-2 and Oberon-2 languages. The unique feature of XDS is seamless integration between the two, which enables you to mix Modula-2 and Oberon-2 modules in one project freely. It includes two toolchains: Native XDS-x86, XDS-C and TopSpeed Compatibility Pack.
 
@@ -83,4 +103,4 @@ Unpacked version of the XDS development system is located in the "enduser/xds" d
 
 Released under the Apache 2.0 license, see [LICENSE](LICENSE).
 
-Copyright © 2019 [Excelsior LLC](https://excelsior.ru)
+Copyright ï¿½ 2019 [Excelsior LLC](https://excelsior.ru)

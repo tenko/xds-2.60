@@ -1,14 +1,14 @@
 # xidetool XDS Oberon-2/Modula-2 IDE integration
 
 This code is from the excelent Obide (Oberon IDE) plugin for Notepad++
-developed by Alexander Iljin. 
+developed by [Alexander Ilin](https://github.com/alex-ilin). 
 
 Information on the plugin found (Russian): [oberoncore.ru](https://forum.oberoncore.ru/viewtopic.php?f=30&t=2027)
 
 
 ## Build instructions
 
-In the utils/xidetool directory:
+In the *utils/xidetool* directory:
 
 ```bash
 xc =p src/xidetool
@@ -16,7 +16,7 @@ xc =p src/xidetool
 
 ## Test
 
-In the utils/xidetool directory:
+In the *utils/xidetool* directory:
 
 ```bash
 ./xidetool.exe src/Project.ob2

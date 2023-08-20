@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Run xc compiler as script. Removes first line
+# in source file, creates a temporary file and
+# run the compiler. Run executable if sucess
+# otherwise show error message.
+
+if [ $# -ne 1 ]; then
+        echo "missing argument"
+		exit 1
+fi
+
+if [ ! -e $1 ]; then
+    >&2 echo "file does not exists"
+    exit 1
+fi
+
+TEMPD=$(mktemp -d)
+if [ ! -e "$TEMPD" ]; then
+    >&2 echo "Failed to create temp directory"
+    exit 1
+fi
+
+filename="$(basename -- $1)"
+tail -n +2 $1 > "${TEMPD}/${filename}"
+
+pushd ${TEMPD} > /dev/null
+xc =m -MAIN+ -SIZE+ "${TEMPD}/${filename}"  &> "${filename%%.*}.out"
+
+if [ ! -e "${filename%%.*}.exe" ]; then
+    cat "${filename%%.*}.out"
+    exit 1
+fi
+./"${filename%%.*}.exe"
+popd > /dev/null
+
+trap "exit 1"           HUP INT PIPE QUIT TERM
+trap 'rm -rf "$TEMPD"'  EXIT
