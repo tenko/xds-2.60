@@ -6,23 +6,22 @@
     "brackets": [
         ["BEGIN", "END"],
         ["(*", "*)"],
+        ["<*", "*>"],
         ["\"", "\""],
         ["'", "'"]
     ],
     "autoClosingPairs": [
         ["BEGIN", "END"],
         ["(*", "*)"],
+        ["<*", "*>"],
         { "open": "'", "close": "'", "notIn": ["string", "comment"] },
         { "open": "\"", "close": "\"", "notIn": ["string", "comment"] }
     ],
     "surroundingPairs": [
         ["BEGIN", "END"],
         ["(*", "*)"],
+        ["<*", "*>"],
         ["\"", "\""],
         ["'", "'"]
-    ],
-    "indentationRules": {
-        "increaseIndentPattern": "^\\s*\\b(ELSE)|((IF).*(THEN)|((FOR|WHILE|LOOP).*(DO)))$",
-		"decreaseIndentPattern": "^\\s*(END|ELSIF|ELSE).*$"
-	}
+    ]
 }
